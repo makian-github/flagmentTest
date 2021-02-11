@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction.addToBackStack(null);
 
                     // インスタンスに対して張り付け方を指定する
-                    fragmentTransaction.replace(R.id.container, new SampleFragment());
+                    fragmentTransaction.replace(R.id.container,
+                            SampleFragment.newInstance("Fragment!!!"));
 
                     // 張り付けを実行
                     fragmentTransaction.commit();
