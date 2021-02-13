@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
                     fragmentTransaction.replace(R.id.container,
                             SampleFragment.newInstance("Fragment!!!"));
 
+                    // counterをパラメータとして設定
+                    int count = 0;
+                    fragmentTransaction.replace(R.id.container, Fragment01.newInstance(count));
+
                     // 張り付けを実行
                     fragmentTransaction.commit();
                 }
